@@ -1,0 +1,48 @@
+[{
+  "id": 1,
+  "version": 1,
+  "update" : "2017-03-14 17:18:31",
+  "target": {
+    "role": {
+      "equals": [
+        "Admin"
+      ]
+    }
+  },
+  "policyCombiningAlgorithm": "allowOverrides",
+  "obligations": {},
+  "priority": 0,
+  "policies": [
+    {
+      "id": 1,
+      "target": {},
+      "ruleCombiningAlgorithm": "allowOverrides",
+      "priority": 0,
+      "obligations": {
+        "permit": {
+          "emailto": "admin@imt-atlantic.fr"
+        }
+      },
+      "rules": [
+        { "id": 1,
+          "target": {},
+          "condition": {},
+          "effect": "permit",
+          "obligations": {
+            "emailto": "admin@imt-atlantic.fr"
+          },
+          "priority": 0
+        },
+        { "id": 2,
+          "target":{},
+          "condition": {},
+          "effect": "permit",
+          "obligations": {
+            "emailto": "admin@imt-atlantic.fr"
+          },
+          "priority": 0
+        }
+      ]
+    }
+  ]
+}]
