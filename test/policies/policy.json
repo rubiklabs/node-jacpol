@@ -24,7 +24,8 @@
         }
       },
       "rules": [
-        { "id": 1,
+        {
+          "id": 1,
           "target": {},
           "condition": {},
           "effect": "permit",
@@ -33,7 +34,8 @@
           },
           "priority": 0
         },
-        { "id": 2,
+        {
+          "id": 2,
           "target":{},
           "condition": {},
           "effect": "permit",
