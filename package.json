@@ -1,15 +1,28 @@
 {
-  "name": "node-jackpol",
-  "version": "0.0.6",
-  "description": "",
+  "name": "@rubiklabs/node-jackpol",
+  "version": "0.0.7",
+  "description": "jacpol",
   "main": "src/index.js",
+  "private": false,
   "scripts": {
     "test": "jest test"
   },
-  "author": "",
+  "keywords": ["jacpol"],
+  "author": "rubiklabs",
   "license": "ISC",
   "dependencies": {
     "jest": "^25.5.3",
     "moment": "^2.24.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubiklabs/node-jacpol.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rubiklabs/node-jacpol/issues"
+  },
+  "homepage": "https://github.com/rubiklabs/node-jacpol#readme"
 }
