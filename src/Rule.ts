@@ -1,7 +1,3 @@
-/**
- * Created by hjiang on 3/1/17.
- */
-
 let Condition = require("./Condition");
 let Res = require("./Res");
 class Rule {
