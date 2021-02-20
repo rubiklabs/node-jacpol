@@ -8,6 +8,7 @@
  * Copyright 2016 Deutsche Telekom AG
  * Copyright 2016 Apizee
  * Copyright 2016 TECHNISCHE UNIVERSITAT BERLIN
+ * Copyright 2016 Telecom Bretagne
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,23 +29,25 @@
  */
 let Response = require("../Response");
 
-class BlockOverrides {
+class AllowOverrides {
+	public name: any;
 
-    constructor (){
+    constructor (context?, name?){
+      this.name = name;
     }
 
     combine(responses) {
-        let response = new Response(this.name, `resulted from block-overrides algorithm of ${this.name}`);
+        let response = new Response(this.name, `resulted from allow-overrides algorithm of ${this.name}`);
         for (let i in responses){
             let res = responses[i];
             response.addObligations(res.obligations);
         }
         let decisions = responses.map(res=>{return res.effect});
-        let idxDeny = decisions.indexOf("deny");
-        if (idxDeny !== -1) {
-            response.setEffect("deny");
-        } else if (decisions.indexOf("permit") !== -1) {
+        let idxPer = decisions.indexOf("permit");
+        if (idxPer !== -1) {
             response.setEffect("permit");
+        } else if (decisions.indexOf("deny") !== -1) {
+            response.setEffect("deny");
         } else {
             response.setInfo("not applicable to the targeted message");
         }
@@ -53,4 +56,4 @@ class BlockOverrides {
 
 }
 
-module.exports = BlockOverrides;
+module.exports = AllowOverrides;

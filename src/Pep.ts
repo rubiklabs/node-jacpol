@@ -12,6 +12,7 @@
 const PDP = require("./Pdp");
 
 class PEP {
+	public pdp: any;
 
     constructor(options) {
       this.pdp = new PDP(options);

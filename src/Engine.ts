@@ -6,6 +6,11 @@ const defaultComparators = require('./comparators');
 
 
 class Engine{
+	public options: any;
+	public pep: any;
+	public store: any;
+	public comparators: any;
+	public operators: any;
 
   setOptions(options){
 

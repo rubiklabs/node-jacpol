@@ -1,4 +1,6 @@
-class Response {
+class Res {
+	public effect: any;
+	public obligations: any;
 
     constructor (effect = 'notApplicable'){
         this.effect = effect;
@@ -23,4 +25,4 @@ class Response {
     }
 }
 
-module.exports = Response;
+module.exports = Res;

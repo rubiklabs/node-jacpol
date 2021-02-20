@@ -28,22 +28,30 @@
  */
 let Response = require("../Response");
 
-class FirstApplicable {
+class BlockOverrides {
+	public name: any;
 
-    constructor (name){
-      this.name = name;
+    constructor (){
     }
 
     combine(responses) {
-        const response = new Response(this.name, `${this.name} not applicable to the targeted message`);
-        for (let i in responses) {
-          if (responses[i].effect !== 'notApplicable') {
-            response = responses[i];
-          }
+        let response = new Response(this.name, `resulted from block-overrides algorithm of ${this.name}`);
+        for (let i in responses){
+            let res = responses[i];
+            response.addObligations(res.obligations);
+        }
+        let decisions = responses.map(res=>{return res.effect});
+        let idxDeny = decisions.indexOf("deny");
+        if (idxDeny !== -1) {
+            response.setEffect("deny");
+        } else if (decisions.indexOf("permit") !== -1) {
+            response.setEffect("permit");
+        } else {
+            response.setInfo("not applicable to the targeted message");
         }
         return response;
     }
 
 }
 
-module.exports = FirstApplicable;
+module.exports = BlockOverrides;

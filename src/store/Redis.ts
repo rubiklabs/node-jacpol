@@ -1,5 +1,8 @@
 const IStore = require("./IStore");
 class RedisStore extends IStore{
+	public context: any;
+	public logger: any;
+	public name: any;
 
     constructor (context){
         super();

@@ -7,7 +7,9 @@
   "scripts": {
     "test": "jest test"
   },
-  "keywords": ["jacpol"],
+  "keywords": [
+    "jacpol"
+  ],
   "author": "rubiklabs",
   "license": "ISC",
   "dependencies": {
@@ -24,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/rubiklabs/node-jacpol/issues"
   },
-  "homepage": "https://github.com/rubiklabs/node-jacpol#readme"
+  "homepage": "https://github.com/rubiklabs/node-jacpol#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.31"
+  }
 }

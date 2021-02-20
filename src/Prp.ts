@@ -1,4 +1,5 @@
 class PRP {
+	public store: any;
 
     constructor(options) {
       this.store = options.store;

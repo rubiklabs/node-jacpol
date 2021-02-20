@@ -1,6 +1,9 @@
 const PolicySet = require('../PolicySet');
 
 class Store{
+	public policySetsJSON: any;
+	public loadPolicies: any;
+	public policySets: any;
 
   getPolicySet(context, message){
       throw new Error("method must be implemented");

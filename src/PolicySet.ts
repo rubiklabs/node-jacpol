@@ -10,6 +10,16 @@ let AllowOverrides = require('./algorithm/AllowOverrides');
 let FirstApplicable = require('./algorithm/FirstApplicable');
 
 class PolicySet {
+	public id: any;
+	public target: any;
+	public version: any;
+	public update: any;
+	public policies: any;
+	public priority: any;
+	public obligations: any;
+	public policyCombiningAlgorithm: any;
+	public context: any;
+	public name: any;
 
     constructor (options,policySetObj) {
 

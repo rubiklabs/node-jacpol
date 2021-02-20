@@ -3,8 +3,14 @@
  */
 
 let Condition = require("./Condition");
-let Response = require("./Response");
+let Res = require("./Res");
 class Rule {
+	public id: any;
+	public target: any;
+	public condition: any;
+	public obligations: any;
+	public effect: any;
+	public priority: any;
 
     constructor(options,rule) {
       if (!("id" in rule)) throw new Error("id is not defined.");
@@ -26,7 +32,7 @@ class Rule {
     }
 
     evaluateCondition(context) {
-        let res = new Response();
+        let res = new Res();
         let isApplicable = this.condition.isApplicable(context);
         if (isApplicable) {
             res.setEffect(this.effect);

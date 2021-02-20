@@ -1,4 +1,7 @@
 class AttributeCondition {
+	public attribute: any;
+	public expression: any;
+	public operators: any;
 
     constructor(options,condition) {
         this.attribute = Object.keys(condition)[0];

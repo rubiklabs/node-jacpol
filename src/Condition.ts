@@ -1,6 +1,11 @@
 let AttributeCondition = require("./AttributeCondition");
 
 class Condition {
+	public usedFor: any;
+	public operators: any;
+	public toString: any;
+	public condition: any;
+	public name: any;
 
     constructor(options, condition, usedFor = "Condition"){
       this.usedFor = usedFor;

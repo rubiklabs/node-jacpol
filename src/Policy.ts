@@ -5,6 +5,12 @@ const AllowOverrides = require('./algorithm/AllowOverrides');
 const FirstApplicable = require('./algorithm/FirstApplicable');
 
 class Policy {
+	public id: any;
+	public priority: any;
+	public target: any;
+	public obligations: any;
+	public rules: any;
+	public ruleCombiningAlgorithm: any;
 
     constructor(options, policyObj) {
 

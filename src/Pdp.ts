@@ -12,6 +12,8 @@ const PRP = require("./Prp");
 const Response = require("./Response");
 
 class PDP {
+	public prp: any;
+	public name: any;
 
   constructor(options) {
     this.prp = new PRP(options);

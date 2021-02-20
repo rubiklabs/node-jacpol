@@ -4,6 +4,8 @@ const path = require('path');
 const PolicySet = require('../PolicySet');
 
 class FileStore extends Store {
+	public srcPath: any;
+	public policySets: any;
 
     constructor(path){
       super();
