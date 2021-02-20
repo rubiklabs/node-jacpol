@@ -8,10 +8,10 @@
 
 'use strict';
 
-const PRP = require("./Prp");
-const Response = require("./Response");
+import PRP from "./Prp";
+import Res from "./Res";
 
-class PDP {
+export default class PDP {
 	public prp: any;
 	public name: any;
 
@@ -27,10 +27,9 @@ class PDP {
       if(policySet){
         response = policySet.evaluatePolicies(context);
       }else{
-        response = new Response(this.name, 'No policies could be found from PRP')
+        //response = new Res(this.name, 'No policies could be found from PRP');
+        response = new Res(this.name);
       }
       return response;
   }
 }
-
-module.exports = PDP;

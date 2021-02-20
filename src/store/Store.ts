@@ -1,12 +1,16 @@
-const PolicySet = require('../PolicySet');
+import PolicySet from '../PolicySet';
 
-class Store{
+export default class Store{
+
 	public policySetsJSON: any;
-	public loadPolicies: any;
 	public policySets: any;
 
-  getPolicySet(context, message){
+  /*getPolicySet(context, message){
       throw new Error("method must be implemented");
+  }*/
+
+  loadPolicies(){
+    throw new Error("method must be implemented");
   }
 
   getSource(){
@@ -42,4 +46,4 @@ class Store{
     });
   }
 }
-module.exports = Store;
+

@@ -1,11 +1,11 @@
-const PEP = require('./Pep');
-const FileStore = require('./store/FileStore');
+import PEP from './Pep';
+import FileStore from './store/FileStore';
 
-const defaultOperators = require('./operators');
-const defaultComparators = require('./comparators');
+import * as defaultOperators from './operators';
+import * as defaultComparators from './comparators';
 
 
-class Engine{
+export default class Engine{
 	public options: any;
 	public pep: any;
 	public store: any;
@@ -31,5 +31,3 @@ class Engine{
     return this.pep.analyse(context);
   }
 }
-
-module.exports = Engine;

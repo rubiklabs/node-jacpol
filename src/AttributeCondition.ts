@@ -1,4 +1,5 @@
-class AttributeCondition {
+export default class AttributeCondition {
+  
 	public attribute: any;
 	public expression: any;
 	public operators: any;
@@ -63,5 +64,3 @@ class AttributeCondition {
       return final;
     }
 }
-
-module.exports = AttributeCondition;

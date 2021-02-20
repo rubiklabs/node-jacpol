@@ -1,6 +1,6 @@
-const moment = require('moment');
+import moment from 'moment';
 
-module.exports = {
+export default {
 
   time(startAt, endAt) {
       const now = moment();

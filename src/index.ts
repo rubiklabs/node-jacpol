@@ -1,4 +1,4 @@
-const Engine = require('./Engine');
+import Engine from './Engine';
 
 const engine =  new Engine();
 

@@ -2,14 +2,15 @@
  * Created by hjiang on 3/4/17.
  */
 
-let moment = require("moment");
-let Policy = require("./Policy");
-let Condition = require("./Condition");
-let BlockOverrides = require('./algorithm/BlockOverrides');
-let AllowOverrides = require('./algorithm/AllowOverrides');
-let FirstApplicable = require('./algorithm/FirstApplicable');
+import moment from "moment";
+import Policy from "./Policy";
+import Condition from "./Condition";
+import BlockOverrides from './algorithm/BlockOverrides';
+import AllowOverrides from './algorithm/AllowOverrides';
+import FirstApplicable from './algorithm/FirstApplicable';
 
-class PolicySet {
+export default class PolicySet {
+  
 	public id: any;
 	public target: any;
 	public version: any;
@@ -106,6 +107,4 @@ class PolicySet {
     toString(){
       return JSON.stringify(this.policies);
     }
-}
-
-module.exports = PolicySet;
+  }

@@ -1,9 +1,10 @@
-const Store = require("./Store");
+import Store from "./Store";
 const fs = require('fs');
 const path = require('path');
-const PolicySet = require('../PolicySet');
+import PolicySet from '../PolicySet';
 
-class FileStore extends Store {
+export default class FileStore extends Store {
+  
 	public srcPath: any;
 	public policySets: any;
 
@@ -44,5 +45,3 @@ class FileStore extends Store {
     }
 
 }
-
-module.exports = FileStore;

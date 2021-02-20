@@ -1,10 +1,10 @@
-const Rule = require("./Rule");
-const Condition = require("./Condition");
-const BlockOverrides = require('./algorithm/BlockOverrides');
-const AllowOverrides = require('./algorithm/AllowOverrides');
-const FirstApplicable = require('./algorithm/FirstApplicable');
+import Rule from "./Rule";
+import Condition from "./Condition";
+import BlockOverrides from './algorithm/BlockOverrides';
+import AllowOverrides from './algorithm/AllowOverrides';
+import FirstApplicable from './algorithm/FirstApplicable';
 
-class Policy {
+export default class Policy {
 	public id: any;
 	public priority: any;
 	public target: any;
@@ -96,5 +96,3 @@ class Policy {
     }
 
 }
-
-module.exports = Policy;

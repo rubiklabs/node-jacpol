@@ -1,6 +1,7 @@
-let AttributeCondition = require("./AttributeCondition");
+import AttributeCondition from "./AttributeCondition";
 
-class Condition {
+export default class Condition {
+  
 	public usedFor: any;
 	public operators: any;
 	public toString: any;
@@ -83,5 +84,3 @@ class Condition {
         }
     }
 }
-
-module.exports = Condition;

@@ -1,4 +1,4 @@
-class Res {
+export default class Res {
 	public effect: any;
 	public obligations: any;
 
@@ -24,5 +24,3 @@ class Res {
         this.obligations.clear();
     }
 }
-
-module.exports = Res;

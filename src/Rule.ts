@@ -1,5 +1,7 @@
-let Condition = require("./Condition");
-class Rule {
+import Condition from "./Condition";
+import Res from './Res';
+
+export default class Rule {
 	public id: any;
 	public target: any;
 	public condition: any;
@@ -8,12 +10,14 @@ class Rule {
 	public priority: any;
 
     constructor(options,rule) {
+        
       if (!("id" in rule)) throw new Error("id is not defined.");
       if (!("target" in rule)) throw new Error("target is not defined.");
       if (!("condition" in rule)) throw new Error("condition is not defined.");
       if (!("obligations" in rule)) throw new Error("obligations is not defined.");
       if (!("effect" in rule)) throw new Error("effect is not defined.");
       if (!("priority" in rule)) throw new Error("priority is not defined.");
+
       this.id = rule.id;
       this.target = new Condition(options,rule.target, 'Target');
       this.condition = new Condition(options,rule.condition);
@@ -38,5 +42,3 @@ class Rule {
     }
 
 }
-
-module.exports = Rule;

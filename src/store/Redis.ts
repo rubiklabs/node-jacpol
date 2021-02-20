@@ -1,5 +1,6 @@
-const IStore = require("./IStore");
-class RedisStore extends IStore{
+import Store from "./Store";
+
+export default class RedisStore extends Store{
 	public context: any;
 	public logger: any;
 	public name: any;
@@ -15,5 +16,3 @@ class RedisStore extends IStore{
         //todo get policy from redis
     }
 }
-
-module.exports = RedisStore;

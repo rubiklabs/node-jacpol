@@ -1,4 +1,4 @@
-class PRP {
+export default class PRP {
 	public store: any;
 
     constructor(options) {
@@ -15,5 +15,3 @@ class PRP {
       return this.getPolicySrc().getPolicySet(context);
     }
 }
-
-module.exports = PRP;

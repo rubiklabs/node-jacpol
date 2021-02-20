@@ -1,6 +1,6 @@
-const moment = require("moment");
+import * as moment from "moment";
 
-module.exports = {
+export default {
 
   // Logic Ops
 
