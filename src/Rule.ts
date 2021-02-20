@@ -1,5 +1,4 @@
 let Condition = require("./Condition");
-let Res = require("./Res");
 class Rule {
 	public id: any;
 	public target: any;
