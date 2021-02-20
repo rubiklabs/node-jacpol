@@ -1,5 +1,5 @@
 {
-  "name": "@rubiklabs/node-jackpol",
+  "name": "@rubiklabs/node-jacpol",
   "version": "0.0.7",
   "description": "jacpol",
   "main": "src/index.js",
